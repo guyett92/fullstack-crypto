@@ -6,4 +6,4 @@
 
 * Node
 * Jest
-* Other Node modules: crypto, 
+* Other Node modules: crypto, hex-to-binary
