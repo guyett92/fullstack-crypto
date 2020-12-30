@@ -5,5 +5,8 @@
 ## Technologies Used
 
 * Node
+* PubNub
+* Postman
 * Jest
-* Other Node modules: crypto, hex-to-binary
+* Express
+* Other Node modules: crypto, hex-to-binary, nodemon, body-parser, cross-env, request
