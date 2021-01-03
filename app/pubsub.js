@@ -21,7 +21,6 @@ class PubSub {
         this.pubnub = new PubNub(credentials);
 
         this.pubnub.subscribe({ channels: Object.values(CHANNELS) });
-        this.subscribeToChannels();
 
         this.pubnub.addListener(this.listener());
     }
@@ -45,7 +44,7 @@ class PubSub {
             message: JSON.stringify(transaction)
         });
     }
-
+    
     listener() {
         return {
             message: messageObject => {
@@ -54,15 +53,11 @@ class PubSub {
                 console.log(`Message received. Channel: ${channel}. Message: ${message}`);
                 const parsedMessage = JSON.parse(message);
 
-                if(channel === CHANNELS.BLOCKCHAIN) {
-                    this.blockchain.replaceChain(parsedMessage);
-                }
-
                 switch(channel) {
                     case CHANNELS.BLOCKCHAIN:
-                        this.blockchain.replaceChain(parsedMessage, true, () => {
+                        this.blockchain.replaceChain(parsedMessage, () => {
                             this.transactionPool.clearBlockchainTransactions(
-                                { chain: parsedMessage.chain }
+                                { chain: parsedMessage }
                             );
                         });
                         break;
