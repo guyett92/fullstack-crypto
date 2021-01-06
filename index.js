@@ -118,7 +118,7 @@ const walletAction = () => generateWalletTransaction({
 });
 
 const walletFooAction = () => generateWalletTransaction({
-    wallet: walletFoo, recipient: walletBar, amount: 10
+    wallet: walletFoo, recipient: walletBar.publicKey, amount: 10
 });
 
 const walletBarAction = () => generateWalletTransaction({
