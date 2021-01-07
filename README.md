@@ -1,6 +1,13 @@
 # Full-Stack Cryptocurrency 
 
-* 
+This is a full-stack application with multiple peers in production that showcases a cryptocurrency built from scratch using Javascript. It is not overly styled, but performs its function effectively. The backend does the following:
+* Implements a mining feature to use computing power to mine transactions.
+* Logs all transactions to a viewable pool until they are mined.
+* Increases or decreases the difficulty of mining based on how long it takes users to mine.
+* Connects multiple production environments together to share transactional data across a network using PubNub.
+* Maintains balances for users within wallets.
+
+To check it out log on to one of the peers here:
 
 ## Get started
 The app is configured to work with PubNub on Heroku. To run locally you can use one of the following options:
@@ -29,3 +36,10 @@ The app is configured to work with PubNub on Heroku. To run locally you can use 
 * Babel
 * Bootstrap
 * Other Node modules: crypto, hex-to-binary, nodemon, body-parser, cross-env, request, elliptic, uuid, react-router, history
+
+## Future Plans
+
+* Styling
+* Wallet information
+* Purchasing options (fake currency)
+* Price trends and analysis
