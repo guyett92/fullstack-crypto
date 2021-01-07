@@ -104,7 +104,7 @@ const syncWithRootState = () => {
 };
 
 // Generate filler data
-if(idDevelopment) {
+if(isDevelopment) {
     const walletFoo = new Wallet();
     const walletBar = new Wallet();
 
