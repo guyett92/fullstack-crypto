@@ -8,6 +8,8 @@ This is a full-stack application with multiple peers in production that showcase
 * Maintains balances for users within wallets.
 
 To check it out log on to one of the peers here:
+* Root: https://whispering-forest-73109.herokuapp.com/blocks
+* Peer: https://cryptic-stream-61133.herokuapp.com/
 
 ## Get started
 The app is configured to work with PubNub on Heroku. To run locally you can use one of the following options:
